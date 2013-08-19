@@ -1,0 +1,26 @@
+h1{
+	font-size: 6em;
+	font-family: 'Roboto Condensed', sans-serif;
+	line-height: 1em;
+	&.cheers{
+		font-family: 'Mr De Haviland', cursive;
+	}
+}
+
+h2{
+	font-size: 3em;
+	margin-bottom: 0;
+	font-family: 'Lobster', cursive;
+	-webkit-margin-before: .25em;
+	-moz-margin-before: .25em;
+	-ms-margin-before: .25em;
+	-o-margin-before: .25em;
+	margin-before: .25em;
+}
+
+p{
+	font-size: 2em;
+	font-family: 'Roboto Condensed', sans-serif;
+	margin: 0;
+	font-weight: bold;
+}

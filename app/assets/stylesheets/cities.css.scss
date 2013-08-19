@@ -1,3 +1,52 @@
-// Place all the styles related to the cities controller here.
+// Place all the styles related to the Cities controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+html{
+	height: 100%;
+}
+body{
+	width: 100%;
+	height: 100%;
+	background: url(image_path('backgrounds/washdc.jpg')) no-repeat center center fixed;
+	-webkit-background-size: cover;
+	background-size: cover;
+}
+
+section{
+	width: 100%;
+	min-height: 100%;
+	position: relative;
+	text-align: center;
+	&.header{
+		background: transparent;
+		.content{
+			background: rgba(242,229,166,.8);
+			color: #404040;
+		}
+	}
+	&:nth-child(3n+2){
+		background: #d9593d;
+		//color: #9ED40D;
+		color: #404040;
+	}
+	&:nth-child(3n+3){
+		background: #63a6a6;
+		//color: #00D6DD;
+		color: #f2e58d;
+	}
+	&:nth-child(3n+4){
+		background: #404040;
+		//color: #00D6DD;
+		color: #f2441d;
+	}
+	.content{
+		position: absolute;
+		top: 30%;
+		width: 100%;
+	}
+}
+
+.container{
+	padding: 40px;
+}
+
