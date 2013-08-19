@@ -15,13 +15,15 @@ body{
 section{
 	width: 100%;
 	height: 100%;
-	position: relative;
-	text-align: center;
+	display: table;
 	&.header{
 		background: transparent;
-		.content{
+		.container{
 			background: rgba(242,229,166,.8);
 			color: #404040;
+			h2{
+				margin-bottom: 0;
+			}
 		}
 	}
 	&:nth-child(3n+2){
@@ -39,15 +41,16 @@ section{
 		//color: #00D6DD;
 		color: #f2441d;
 	}
-	.content{
-		position: absolute;
-		top: 50%;
-		margin-top: -8em;
-		width: 100%;
-	}
+}
+
+.content{
+	display: table-cell;
+	vertical-align: middle;
+	width: 100%;
 }
 
 .container{
 	padding: 40px;
+	text-align: center;
 }
 
