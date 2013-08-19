@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  cheers: MyString
+  utc-offset: 
+  dst: false
+
+two:
+  name: MyString
+  cheers: MyString
+  utc-offset: 
+  dst: false
