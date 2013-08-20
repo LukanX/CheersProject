@@ -1,9 +1,10 @@
+<% provide(:title, @city.name) %>
 <section class = "header">
 	<div class="content">
 		<div class="container">
-			<h1 class = 'cheers'>Cheers!</h1>
+			<h1 class = 'cheers'><%= @city.cheers%>!</h1>
 			<p>It's 5 O'Clock in</p>
-			<h2>Washington, DC</h2>
+			<h2><%= @city.name %></h2>
 		</div>
 	</div>
 </section>
