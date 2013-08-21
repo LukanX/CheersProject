@@ -2,9 +2,12 @@
 <section class = "header">
 	<div class="content">
 		<div class="container">
+			<h3>Create City</h3>
 			<%= form_for [@city] do |f| %>
 				<%= render 'fields', f: f %>
-				<%= f.submit "Create city|", class: "btn btn-large" %>
+				<div class="submit">
+					<%= f.submit "Create city", class: "btn" %>
+				</div>
 			<% end %>
 		</div>
 	</div>

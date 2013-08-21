@@ -1,0 +1,16 @@
+.btn{
+	padding: 7px 15px 9px;
+	background: #63A6A6;
+	color: #fff;
+	border: 1px solid #404040;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+	display: block;
+	&.btn-large{
+		padding: 9px 20px 12px;
+	}
+	&:hover{
+		background: #78C9C9;
+	}
+}

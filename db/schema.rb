@@ -11,16 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130819200337) do
+ActiveRecord::Schema.define(version: 20130821175005) do
 
   create_table "cities", force: true do |t|
     t.string   "name"
     t.string   "cheers"
-    t.integer  "utc_offset"
-    t.boolean  "dst",        default: true
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "background"
+    t.string   "time_zone"
   end
 
 end

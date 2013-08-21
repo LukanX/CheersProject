@@ -7,6 +7,7 @@ h1{
 	&.cheers{
 		font-family: 'Mr De Haviland', cursive;
 		font-size: 6em;
+		margin-bottom: -8px;
 	}
 }
 
@@ -14,11 +15,23 @@ h2{
 	font-size: 3em;
 	//margin-bottom: 0;
 	font-family: 'Lobster', cursive;
-	-webkit-margin-before: .25em;
-	-moz-margin-before: .25em;
-	-ms-margin-before: .25em;
-	-o-margin-before: .25em;
-	margin-before: .25em;
+}
+
+h3{
+	font-size: 2.3em;
+}
+
+h1,h2, h3, h4, h5, h6{
+	-webkit-margin-before: 0;
+	-moz-margin-before: 0;
+	-ms-margin-before: 0;
+	-o-margin-before: 0;
+	margin-before: 0;
+	-webkit-margin-after: 0;
+	-moz-margin-after: 0;
+	-ms-margin-after: 0;
+	-o-margin-after: 0;
+	margin-after: 0;
 }
 
 p{
@@ -28,7 +41,21 @@ p{
 }
 
 label{
+	font-size: 1.5em;
+}
+
+select, input{
+	font-size: 1.5em;
+}
+
+
+.btn{
 	font-size: 1.2em;
+	-webkit-text-shadow: 0 -1px rgba(0, 0, 0, .7);
+	-moz-text-shadow: 0 -1px rgba(0, 0, 0, .7);
+	-ms-text-shadow: 0 -1px rgba(0, 0, 0, .7);
+	-o-text-shadow: 0 -1px rgba(0, 0, 0, .7);
+	text-shadow: 0 -1px rgba(0, 0, 0, .7);
 }
 
 /*@media (max-width: 640px){
