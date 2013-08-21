@@ -1,0 +1,16 @@
+form{
+	width: 40%;
+	margin: auto;
+	text-align: left;
+}
+
+label{
+	display: block;
+}
+
+input[type = "text"]{
+	display: block;
+	width: 100%;
+	margin-bottom: 20px;
+	padding: 10px;
+}

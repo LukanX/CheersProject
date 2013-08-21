@@ -1,0 +1,11 @@
+<% provide(:title, "Create a City Page") %>
+<section class = "header">
+	<div class="content">
+		<div class="container">
+			<%= form_for [@city] do |f| %>
+				<%= render 'fields', f: f %>
+				<%= f.submit "Create city|", class: "btn btn-large" %>
+			<% end %>
+		</div>
+	</div>
+</section>

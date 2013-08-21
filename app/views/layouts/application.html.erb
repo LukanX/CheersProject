@@ -7,7 +7,13 @@
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
-<body style = "background-image: url(<%= asset_path "backgrounds/"+@city.background %>);">
+
+<% if @city.background != nil %>
+	<body style = "background-image: url(<%= asset_path "backgrounds/"+@city.background %>);">
+<% else %>
+	<body style = "background-image: url(<%= asset_path "backgrounds/construction.jpg" %>);">
+<% end %>
+
 
 <%= yield %>
 
