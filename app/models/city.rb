@@ -22,4 +22,8 @@ class City < ActiveRecord::Base
 		self.five_pm == true
 	end
 
+  def find_five
+    self.select {|city| city.five_pm?}
+  end
+
 end

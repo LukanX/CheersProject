@@ -16,6 +16,7 @@ section{
 	width: 100%;
 	height: 100%;
 	display: table;
+	position: relative;
 	&.header{
 		background: transparent;
 		.container{
@@ -26,17 +27,17 @@ section{
 			}
 		}
 	}
-	&:nth-child(3n+2){
+	&.fact:nth-child(3n+1){
 		background: #d9593d;
 		//color: #9ED40D;
 		color: #404040;
 	}
-	&:nth-child(3n+3){
+	&.fact:nth-child(3n+2){
 		background: #63a6a6;
 		//color: #00D6DD;
 		color: #f2e58d;
 	}
-	&:nth-child(3n+4){
+	&.fact:nth-child(3n+3){
 		background: #404040;
 		//color: #00D6DD;
 		color: #f2441d;
