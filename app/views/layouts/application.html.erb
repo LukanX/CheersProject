@@ -14,6 +14,9 @@
 	<body style = "background-image: url(<%= asset_path "backgrounds/construction.jpg" %>);">
 <% end %>
 
+<% flash.each do |key, value| %>
+  <div class="alert alert-<%= key %>"><%= value %></div>
+<% end %>
 
 <%= yield %>
 

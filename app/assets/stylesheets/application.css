@@ -14,5 +14,6 @@
  *= require 'typography'
  *= require 'buttons'
  *= require 'forms'
+ *= require 'alerts'
  *= require 'cities'
  */

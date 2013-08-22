@@ -1,0 +1,11 @@
+.alert{
+  width: 100%;
+  color: rgba(255,255,255,.9);
+  text-align: center;
+  &.alert-error{
+    background: rgba(217,89,61,.75);
+  }
+  &.alert-success{
+    background: rgba(166,255,64,.75)
+  }
+}

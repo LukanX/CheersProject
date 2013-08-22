@@ -1,0 +1,14 @@
+<% provide(:title, "Edit a City Page") %>
+<section class = "header">
+  <div class="content">
+    <div class="container">
+      <h3>Edit City</h3>
+      <%= form_for [@city] do |f| %>
+        <%= render 'fields', f: f %>
+        <div class="submit">
+          <%= f.submit "Edit City", class: "btn" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</section>
