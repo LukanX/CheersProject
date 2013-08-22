@@ -1,7 +1,7 @@
 class CitiesController < ApplicationController
 	
 	def index
-		@city = City.last
+		@city = City.pick_city
 	end
 
 	def show
