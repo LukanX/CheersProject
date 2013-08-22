@@ -7,7 +7,7 @@ class City < ActiveRecord::Base
 
 	def hour
 		Time.zone = time_zone
-		@hour = Time.now.hour
+		@hour = Time.zone.now.hour
 	end
 
 	def five_pm
