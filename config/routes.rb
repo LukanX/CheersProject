@@ -1,5 +1,6 @@
 CheersProject::Application.routes.draw do
 
+  devise_for :users
   resources :cities
 
   get 'create', to: 'cities#new'

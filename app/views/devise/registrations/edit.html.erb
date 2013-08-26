@@ -1,0 +1,9 @@
+<% provide(:title, "Edit account") %>
+<h3>Edit Account</h3>
+<p>Leave password fields blank if you don't want to change your password</p>
+<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f| %>
+  <%= render 'fields', f: f %>
+  <div class="submit">
+    <%= f.submit "Sign up", class: "btn" %>
+  </div>
+<% end %>

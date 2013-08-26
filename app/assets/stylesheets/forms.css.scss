@@ -9,12 +9,18 @@ label{
 	line-height: 1.5em;
 }
 
-input[type = "text"], select {
+input[type = "text"],input[type = "password"], input[type = "email"], select {
 	display: block;
 	width: 100%;
 	margin-bottom: 20px;
 	padding: 5px 0;
 }
+
+label.remember{
+  display: inline;
+
+}
+
 
 input[type = "submit"]{
 	margin: 0 0 0 auto ;

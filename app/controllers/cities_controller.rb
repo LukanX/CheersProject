@@ -1,4 +1,7 @@
 class CitiesController < ApplicationController
+  before_filter :admin_user,     only: [:destroy, :edit, :update, :new, :create]
+
+  layout 'city_layout'
 	
 	def index
 		@city = City.pick_city

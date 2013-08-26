@@ -9,7 +9,7 @@ gem 'protected_attributes'
 
 # Devise
 
-gem "devise", "~> 3.0.3"
+gem "devise", "~> 3.0.0rc"
 
 group :development, :test do
 	# Use sqlite3 as the database for Active Record

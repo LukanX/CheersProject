@@ -12,6 +12,16 @@ body{
 	background-size: cover;
 }
 
+a{
+	color: #207178;
+	&:hover{
+		color: #174C4F;
+	}
+	&:visited{
+		color: #174C4F;
+	}
+}
+
 section{
 	width: 100%;
 	height: 100%;

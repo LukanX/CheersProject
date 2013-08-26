@@ -1,0 +1,9 @@
+<% provide(:title, "Create account") %>
+
+<h3>Create Account</h3>
+<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+  <%= render 'fields', f: f %>
+  <div class="submit">
+    <%= f.submit "Sign up", class: "btn" %>
+  </div>
+<% end %>

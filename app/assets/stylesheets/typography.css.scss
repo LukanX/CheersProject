@@ -32,6 +32,10 @@ h1,h2, h3, h4, h5, h6{
 	margin-after: 0;
 }
 
+a{
+	text-decoration: none;
+}
+
 p{
 	font-size: 1.5em;
 	margin: 0;
@@ -40,6 +44,10 @@ p{
 
 label{
 	font-size: 1.5em;
+	&.remember{
+		font-size: 1em;
+		margin-left: 5px;
+	}
 }
 
 select, input{

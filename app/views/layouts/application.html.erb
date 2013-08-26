@@ -1,24 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title><%= full_title(yield(:title)) %></title>
+  <title><%= yield(:title) %></title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <link href='http://fonts.googleapis.com/css?family=Pacifico|Oswald' rel='stylesheet' type='text/css'>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
 
-<% if @city.background != nil %>
-	<body style = "background-image: url(<%= asset_path "backgrounds/"+@city.background %>);">
-<% else %>
 	<body style = "background-image: url(<%= asset_path "backgrounds/construction.jpg" %>);">
-<% end %>
 
 <% flash.each do |key, value| %>
   <div class="alert alert-<%= key %>"><%= value %></div>
 <% end %>
+<section class = "header">
+  <div class="content">
+    <div class="container">
 
-<%= yield %>
+      <%= yield %>
+    </div>
+  </div>
+</section>
 
 </body>
 </html>

@@ -130,7 +130,7 @@ PLATFORMS
 
 DEPENDENCIES
   coffee-rails (~> 4.0.0)
-  devise (~> 3.0.3)
+  devise (~> 3.0.0rc)
   jbuilder (~> 1.2)
   jquery-rails
   jquery-ui-rails

@@ -1,3 +1,4 @@
+<% if @city != nil %>
 <% provide(:title, @city.name) %>
 <section class = "header">
 	<div class="content">
@@ -34,3 +35,14 @@
 		</div>
 	</div>
 </section>
+<% else %>
+<section class = "header">
+  <div class="content">
+    <div class="container">
+      <h1 class = 'cheers'>Oops!</h1>
+      <p>We couldn't find a city</p>
+      <h2>Here's a cat</h2>
+    </div>
+  </div>
+</section>
+<% end %>
