@@ -7,6 +7,10 @@ gem 'rails', '4.0.0'
 
 gem 'protected_attributes'
 
+# Devise
+
+gem "devise", "~> 3.0.3"
+
 group :development, :test do
 	# Use sqlite3 as the database for Active Record
 	gem 'sqlite3'
