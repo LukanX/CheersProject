@@ -9,32 +9,28 @@
 		</div>
 	</div>
 </section>
-<section class = "fact">
-	<div class="content">
-		<div class="container">
-			<h2>DC Adults Who are Alcohol Dependent</h2>
-			<h1>8.1%</h1>
-		</div>
-	</div>
-</section>
+<% if @fun_facts.any? %>
+	
+	<section class="fact"> <%= render @fun_facts %> </section>
 
-<section class = "fact">
-	<div class="content">
-		<div class="container">
-			<h2>#1 Douchiest Bar in DC</h2>
-			<h1>McFadden's</h1>
-		</div>
-	</div>
-</section>
 
+<% end %>
+
+<% if user_signed_in? && current_user.admin? %>
 <section class = "fact">
 	<div class="content">
 		<div class="container">
-			<h2>Most Popular Drink for Senators</h2>
-			<h1>Stripper Body Shots</h1>
+			<h3>Add fact</h3>
+			<%= form_for [@city, @new_fact] do |f| %>
+				<%= render '/fun_facts/fields', f: f %>
+				<div class="submit">
+					<%= f.submit "Create city", class: "btn" %>
+				</div>
+			<% end %>
 		</div>
 	</div>
 </section>
+<% end %>
 <% else %>
 <section class = "header">
   <div class="content">

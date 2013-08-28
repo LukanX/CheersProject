@@ -5,10 +5,14 @@ class CitiesController < ApplicationController
 	
 	def index
 		@city = City.pick_city
+    @fun_facts = @city.fun_facts
+    @new_fact = @city.fun_facts.new
 	end
 
 	def show
 		@city = City.find(params[:id])
+    @fun_facts = @city.fun_facts
+    @new_fact = @city.fun_facts.new
 	end
 
 	def new

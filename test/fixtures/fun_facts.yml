@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  fact_title: MyString
+  fact: MyString
+  city_id: 1
+
+two:
+  fact_title: MyString
+  fact: MyString
+  city_id: 1

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130826150442) do
+ActiveRecord::Schema.define(version: 20130827215356) do
 
   create_table "admins", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -39,6 +39,16 @@ ActiveRecord::Schema.define(version: 20130826150442) do
     t.string   "background"
     t.string   "time_zone"
   end
+
+  create_table "fun_facts", force: true do |t|
+    t.string   "fact_title"
+    t.string   "fact"
+    t.integer  "city_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "fun_facts", ["city_id"], name: "index_fun_facts_on_city_id"
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "",    null: false

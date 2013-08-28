@@ -1,0 +1,8 @@
+
+<h3> Add a Fun Fact </h3>
+<%= form_for [current_city, @fun_fact] do |f| %>
+  <%= render 'fields', f: f %>
+  <div class ="submit">
+    <%= f.submit "add fact", class: "btn" %>
+  </div>
+<% end %>

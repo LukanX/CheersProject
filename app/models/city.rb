@@ -5,6 +5,8 @@ class City < ActiveRecord::Base
 	validates :time_zone, presence: true
 	validates :background, presence: true
 
+  has_many :fun_facts
+
 	def hour
 		Time.zone = time_zone
 		@hour = Time.zone.now.hour
