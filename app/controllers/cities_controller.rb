@@ -5,8 +5,10 @@ class CitiesController < ApplicationController
 	
 	def index
 		@city = City.pick_city
-    @fun_facts = @city.fun_facts
-    @new_fact = @city.fun_facts.new
+    unless @city.nil?
+      @fun_facts = @city.fun_facts
+      @new_fact = @city.fun_facts.new
+    end
 	end
 
 	def show

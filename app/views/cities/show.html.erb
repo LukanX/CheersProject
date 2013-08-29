@@ -9,10 +9,9 @@
 	</div>
 </section>
 
-<% if @fun_facts.any? %>
-	
-	<section class="fact"> <%= render @fun_facts %> </section>
+	<% if @fun_facts.any? %>
 
+	<%= render @fun_facts %>
 
 <% end %>
 

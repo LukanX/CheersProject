@@ -1,44 +1,44 @@
-<% if @city != nil %>
-<% provide(:title, @city.name) %>
-<section class = "header">
-	<div class="content">
-		<div class="container">
-			<h1 class = 'cheers'><%= @city.cheers%>!</h1>
-			<p>It's 5 O'Clock in</p>
-			<h2><%= @city.name %></h2>
-		</div>
-	</div>
-</section>
-<% if @fun_facts.any? %>
+<% if @city.nil? %>
 	
-	<section class="fact"> <%= render @fun_facts %> </section>
+	<section class = "header">
+	  <div class="content">
+	    <div class="container">
+	      <h1 class = 'cheers'>Oops!</h1>
+	      <p>We couldn't find a city</p>
+	      <h2>Here's a cat</h2>
+	    </div>
+	  </div>
+	</section>
 
-
-<% end %>
-
-<% if user_signed_in? && current_user.admin? %>
-<section class = "fact">
-	<div class="content">
-		<div class="container">
-			<h3>Add fact</h3>
-			<%= form_for [@city, @new_fact] do |f| %>
-				<%= render '/fun_facts/fields', f: f %>
-				<div class="submit">
-					<%= f.submit "Create city", class: "btn" %>
-				</div>
-			<% end %>
-		</div>
-	</div>
-</section>
-<% end %>
 <% else %>
-<section class = "header">
-  <div class="content">
-    <div class="container">
-      <h1 class = 'cheers'>Oops!</h1>
-      <p>We couldn't find a city</p>
-      <h2>Here's a cat</h2>
-    </div>
-  </div>
-</section>
+
+	<% provide(:title, @city.name) %>
+	<section class = "header">
+		<div class="content">
+			<div class="container">
+				<h1 class = 'cheers'><%= @city.cheers%>!</h1>
+				<p>It's 5 O'Clock in</p>
+				<h2><%= @city.name %></h2>
+			</div>
+		</div>
+	</section>
+
+	<%= render(:partial => "fun_facts/fun_fact", :collection => @fun_facts) unless @fun_facts.blank? %>
+
+	<% if user_signed_in? && current_user.admin? %>
+	<section class = "fact">
+		<div class="content">
+			<div class="container">
+				<h3>Add fact</h3>
+				<%= form_for [@city, @new_fact] do |f| %>
+					<%= render '/fun_facts/fields', f: f %>
+					<div class="submit">
+						<%= f.submit "Create city", class: "btn" %>
+					</div>
+				<% end %>
+			</div>
+		</div>
+	</section>
+	<% end %>
+	
 <% end %>

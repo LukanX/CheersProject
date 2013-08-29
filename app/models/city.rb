@@ -29,7 +29,7 @@ class City < ActiveRecord::Base
   end
 
   def self.pick_city
-    self.find_five.sample
+    @city = self.find_five.sample
   end
 
 end
