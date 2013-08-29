@@ -9,11 +9,7 @@
 	</div>
 </section>
 
-	<% if @fun_facts.any? %>
-
-	<%= render @fun_facts %>
-
-<% end %>
+<%= render(:partial => "fun_facts/fun_fact", :collection => @fun_facts) unless @fun_facts.blank? %>
 
 <% if user_signed_in? && current_user.admin? %>
 <section class = "fact">
