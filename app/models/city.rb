@@ -3,7 +3,11 @@ class City < ActiveRecord::Base
 	validates :name, presence: true,  uniqueness: true
 	validates :cheers, presence: true
 	validates :time_zone, presence: true
-	validates :background, presence: true
+  validates :background, :attachment_presence => true
+  validates_with AttachmentPresenceValidator, :attributes => :background
+
+  has_attached_file :background, :styles => { :small => "300x300>"}, 
+                                        :default_url => "/assets/backgrounds/construction.jpg"
 
   has_many :fun_facts
 

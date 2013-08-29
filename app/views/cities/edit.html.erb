@@ -3,7 +3,7 @@
   <div class="content">
     <div class="container">
       <h3>Edit City</h3>
-      <%= form_for [@city] do |f| %>
+      <%= form_for [@city], :html => { :multipart => true } do |f| %>
         <%= render 'fields', f: f %>
         <div class="submit">
           <%= f.submit "Edit City", class: "btn" %>

@@ -6,8 +6,8 @@
 <%= f.label :cheers, "City's version of \"Cheers\"" %>
 <%= f.text_field :cheers %>
 
-<%= f.label :background, "Background image file" %>
-<%= f.text_field :background %>
-
 <%= f.label :time_zone %>
 <%= f.time_zone_select :time_zone %>
+
+<%= f.label :background, "Background image file" %>
+<%= f.file_field :background %>

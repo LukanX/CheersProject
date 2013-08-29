@@ -8,14 +8,10 @@
   <%= csrf_meta_tags %>
 </head>
 <% if @city == nil %>
-  <body style = "background-image: url(<%= asset_path "backgrounds/cat.jpg" %>);">
+  <body style = "background-image: url(<%= asset_path "background/cat.jpg" %>);">
 <% else %>
-    <% if @city.background != nil %>
-      <body style = "background-image: url(<%= asset_path "backgrounds/"+@city.background %>);">
-    <% else %>
-      <body style = "background-image: url(<%= asset_path "backgrounds/construction.jpg" %>);">
-    <% end %>
-  <% end %>
+    <body style = "background-image: url(<%= asset_path @city.background.url %>);">
+<% end %>
 
   <% if user_signed_in? %>
   <%= link_to 'Sign out', destroy_user_session_path, :method => :delete %>

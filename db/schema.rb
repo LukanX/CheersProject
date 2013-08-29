@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130827215356) do
+ActiveRecord::Schema.define(version: 20130829180549) do
 
   create_table "admins", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -36,8 +36,11 @@ ActiveRecord::Schema.define(version: 20130827215356) do
     t.string   "cheers"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "background"
     t.string   "time_zone"
+    t.string   "background_file_name"
+    t.string   "background_content_type"
+    t.integer  "background_file_size"
+    t.datetime "background_updated_at"
   end
 
   create_table "fun_facts", force: true do |t|

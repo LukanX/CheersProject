@@ -11,6 +11,12 @@ gem 'protected_attributes'
 
 gem "devise", "~> 3.0.0rc"
 
+#images
+
+gem 'rmagick', '2.13.2'
+
+gem "paperclip", "~> 3.0"
+
 group :development, :test do
 	# Use sqlite3 as the database for Active Record
 	gem 'sqlite3'
