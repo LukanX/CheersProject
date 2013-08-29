@@ -8,7 +8,7 @@
   <%= csrf_meta_tags %>
 </head>
 <% if @city == nil %>
-  <body style = "background-image: url(<%= asset_path "background/cat.jpg" %>);">
+  <body style = "background-image: url(<%= asset_path "backgrounds/cat.jpg" %>);">
 <% else %>
     <body style = "background-image: url(<%= asset_path @city.background.url %>);">
 <% end %>
